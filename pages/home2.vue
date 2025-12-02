@@ -1,21 +1,14 @@
 <template>
   <div>
+    <!-- Alternative Navigation -->
+    <AlternativeNavigation />
+
     <!-- Hero Section with Split Layout -->
-    <section class="relative min-h-screen flex flex-col md:flex-row">
+    <section class="relative min-h-screen flex flex-col md:flex-row pt-16">
       <!-- Left Section - Blue Background -->
       <div
         class="w-full md:w-1/2 bg-blue-600 flex flex-col justify-between p-8 md:p-12 lg:p-16 md:min-h-screen"
       >
-        <!-- Top Branding -->
-        <div class="mb-8">
-          <NuxtLink
-            to="/"
-            class="text-2xl font-bold text-white hover:text-blue-200 transition-colors"
-          >
-            Mason Morrow
-          </NuxtLink>
-        </div>
-
         <!-- Main Content -->
         <div class="flex-1 flex flex-col justify-center space-y-6">
           <!-- Greeting -->

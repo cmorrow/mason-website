@@ -2,7 +2,7 @@
   <div class="min-h-screen bg-white">
     <!-- Hero Section with Blue Gradient and Chevron Pattern -->
     <section
-      class="relative py-20 bg-gradient-to-br from-blue-900 via-blue-800 to-blue-700 overflow-hidden"
+      class="relative py-20 bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 overflow-hidden"
     >
       <!-- Chevron Pattern Overlay -->
       <div class="absolute inset-0 opacity-10 chevron-pattern"></div>
@@ -12,14 +12,9 @@
           <h1 class="text-6xl md:text-7xl font-bold mb-6 tracking-tight">
             CONTACT
           </h1>
-          <div
-            class="bg-white/10 backdrop-blur-sm rounded-lg p-8 border border-white/20"
-          >
-            <p class="text-xl md:text-2xl text-blue-100 leading-relaxed">
-              Let's connect about theatre projects, collaborations, or
-              opportunities
-            </p>
-          </div>
+          <HeroTagline
+            text="Let's connect about theatre projects, collaborations, or opportunities"
+          />
         </div>
       </UContainer>
     </section>

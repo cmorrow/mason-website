@@ -34,7 +34,7 @@
               <div class="absolute bottom-6 left-6 z-10">
                 <button
                   @click.stop="openLightbox(0)"
-                  class="bg-blue-900/95 hover:bg-blue-800 text-white px-8 py-4 rounded-lg shadow-xl transition-all backdrop-blur-sm font-semibold text-lg flex items-center gap-2 group/btn"
+                  class="bg-blue-950/95 hover:bg-blue-900 text-white px-8 py-4 rounded-lg shadow-xl transition-all backdrop-blur-sm font-semibold text-lg flex items-center gap-2 group/btn"
                   aria-label="View gallery"
                 >
                   <span>View Gallery</span>
@@ -63,14 +63,14 @@
           >
             <div class="relative z-10">
               <h2
-                class="text-4xl md:text-5xl font-bold text-blue-900 mb-6 leading-tight"
+                class="text-4xl md:text-5xl font-bold text-blue-950 mb-6 leading-tight"
               >
                 {{ performance.title }}
               </h2>
 
               <!-- Decorative line -->
               <div
-                class="w-20 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mb-8"
+                class="w-20 h-1 bg-gradient-to-r from-blue-900 to-blue-800 mb-8"
               ></div>
 
               <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
@@ -80,10 +80,10 @@
               <!-- Additional info box -->
               <div
                 v-if="index % 2 === 1"
-                class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 border-l-4 border-blue-600"
+                class="bg-gradient-to-br from-blue-900/10 to-blue-950/10 rounded-lg p-6 border-l-4 border-blue-950"
               >
                 <p
-                  class="text-sm font-semibold text-blue-900 uppercase tracking-wider mb-2"
+                  class="text-sm font-semibold text-blue-950 uppercase tracking-wider mb-2"
                 >
                   Theatrical Production
                 </p>
