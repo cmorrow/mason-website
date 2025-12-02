@@ -26,117 +26,162 @@
     <!-- Resume Section -->
     <section class="py-20 bg-white">
       <UContainer>
-        <div class="max-w-4xl mx-auto space-y-12">
+        <div class="max-w-7xl mx-auto space-y-24">
           <!-- Teaching Resume -->
-          <UCard class="p-8">
-            <div class="flex items-start justify-between mb-6">
-              <h2 class="text-3xl font-bold text-blue-900">Teaching Resume</h2>
-              <UButton 
-                color="blue" 
-                variant="outline"
-                to="/resumes/teaching-resume.pdf"
-                target="_blank"
-              >
-                Download PDF
-              </UButton>
+          <div class="relative">
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-blue-50 to-white rounded-2xl -z-10"
+            ></div>
+            <div class="relative overflow-hidden rounded-2xl shadow-xl bg-white">
+              <div class="p-12 md:p-16">
+                <div class="flex items-start justify-between mb-8">
+                  <h2 class="text-4xl md:text-5xl font-bold text-blue-900 leading-tight">
+                    Teaching Resume
+                  </h2>
+                  <UButton 
+                    color="blue" 
+                    variant="outline"
+                    to="/resumes/teaching-resume.pdf"
+                    target="_blank"
+                    class="shrink-0 ml-4"
+                  >
+                    Download PDF
+                  </UButton>
+                </div>
+                
+                <!-- Decorative line -->
+                <div
+                  class="w-20 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mb-8"
+                ></div>
+                
+                <ul class="space-y-4 text-lg md:text-xl text-gray-700 leading-relaxed">
+                  <li class="flex items-start">
+                    <span class="text-blue-600 mr-3 mt-1">•</span>
+                    <span>Extensive experience in theatre education and curriculum development</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-600 mr-3 mt-1">•</span>
+                    <span>Proven track record of student engagement and artistic development</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-600 mr-3 mt-1">•</span>
+                    <span>Specialized in acting techniques, stagecraft, and theatrical production</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-600 mr-3 mt-1">•</span>
+                    <span>Experience directing student productions and workshops</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-600 mr-3 mt-1">•</span>
+                    <span>Commitment to fostering creativity and critical thinking in students</span>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <ul class="space-y-3 text-gray-700">
-              <li class="flex items-start">
-                <span class="text-blue-600 mr-2">•</span>
-                <span>Extensive experience in theatre education and curriculum development</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-blue-600 mr-2">•</span>
-                <span>Proven track record of student engagement and artistic development</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-blue-600 mr-2">•</span>
-                <span>Specialized in acting techniques, stagecraft, and theatrical production</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-blue-600 mr-2">•</span>
-                <span>Experience directing student productions and workshops</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-blue-600 mr-2">•</span>
-                <span>Commitment to fostering creativity and critical thinking in students</span>
-              </li>
-            </ul>
-          </UCard>
+          </div>
 
           <!-- Performance Resume -->
-          <UCard class="p-8">
-            <div class="flex items-start justify-between mb-6">
-              <h2 class="text-3xl font-bold text-blue-900">Performance Resume</h2>
-              <UButton 
-                color="blue" 
-                variant="outline"
-                to="/resumes/performance-resume.pdf"
-                target="_blank"
-              >
-                Download PDF
-              </UButton>
+          <div class="relative">
+            <div class="relative overflow-hidden rounded-2xl shadow-xl bg-white">
+              <div class="p-12 md:p-16">
+                <div class="flex items-start justify-between mb-8">
+                  <h2 class="text-4xl md:text-5xl font-bold text-blue-900 leading-tight">
+                    Performance Resume
+                  </h2>
+                  <UButton 
+                    color="blue" 
+                    variant="outline"
+                    to="/resumes/performance-resume.pdf"
+                    target="_blank"
+                    class="shrink-0 ml-4"
+                  >
+                    Download PDF
+                  </UButton>
+                </div>
+                
+                <!-- Decorative line -->
+                <div
+                  class="w-20 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mb-8"
+                ></div>
+                
+                <ul class="space-y-4 text-lg md:text-xl text-gray-700 leading-relaxed">
+                  <li class="flex items-start">
+                    <span class="text-blue-600 mr-3 mt-1">•</span>
+                    <span>Versatile performer with experience in classical and contemporary theatre</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-600 mr-3 mt-1">•</span>
+                    <span>Strong background in character development and stage presence</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-600 mr-3 mt-1">•</span>
+                    <span>Experience in both dramatic and comedic roles</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-600 mr-3 mt-1">•</span>
+                    <span>Collaborative approach to ensemble work and production</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-600 mr-3 mt-1">•</span>
+                    <span>Dedicated to continuous artistic growth and professional development</span>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <ul class="space-y-3 text-gray-700">
-              <li class="flex items-start">
-                <span class="text-blue-600 mr-2">•</span>
-                <span>Versatile performer with experience in classical and contemporary theatre</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-blue-600 mr-2">•</span>
-                <span>Strong background in character development and stage presence</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-blue-600 mr-2">•</span>
-                <span>Experience in both dramatic and comedic roles</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-blue-600 mr-2">•</span>
-                <span>Collaborative approach to ensemble work and production</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-blue-600 mr-2">•</span>
-                <span>Dedicated to continuous artistic growth and professional development</span>
-              </li>
-            </ul>
-          </UCard>
+          </div>
 
           <!-- Technical Resume -->
-          <UCard class="p-8">
-            <div class="flex items-start justify-between mb-6">
-              <h2 class="text-3xl font-bold text-blue-900">Technical Resume</h2>
-              <UButton 
-                color="blue" 
-                variant="outline"
-                to="/resumes/technical-resume.pdf"
-                target="_blank"
-              >
-                Download PDF
-              </UButton>
+          <div class="relative">
+            <div
+              class="absolute inset-0 bg-gradient-to-br from-blue-50 to-white rounded-2xl -z-10"
+            ></div>
+            <div class="relative overflow-hidden rounded-2xl shadow-xl bg-white">
+              <div class="p-12 md:p-16">
+                <div class="flex items-start justify-between mb-8">
+                  <h2 class="text-4xl md:text-5xl font-bold text-blue-900 leading-tight">
+                    Technical Resume
+                  </h2>
+                  <UButton 
+                    color="blue" 
+                    variant="outline"
+                    to="/resumes/technical-resume.pdf"
+                    target="_blank"
+                    class="shrink-0 ml-4"
+                  >
+                    Download PDF
+                  </UButton>
+                </div>
+                
+                <!-- Decorative line -->
+                <div
+                  class="w-20 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mb-8"
+                ></div>
+                
+                <ul class="space-y-4 text-lg md:text-xl text-gray-700 leading-relaxed">
+                  <li class="flex items-start">
+                    <span class="text-blue-600 mr-3 mt-1">•</span>
+                    <span>Expertise in stage management and production coordination</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-600 mr-3 mt-1">•</span>
+                    <span>Proficient in lighting design, sound design, and technical direction</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-600 mr-3 mt-1">•</span>
+                    <span>Experience with set construction and scenic design</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-600 mr-3 mt-1">•</span>
+                    <span>Knowledge of theatre safety protocols and equipment operation</span>
+                  </li>
+                  <li class="flex items-start">
+                    <span class="text-blue-600 mr-3 mt-1">•</span>
+                    <span>Ability to manage multiple technical aspects of theatrical productions</span>
+                  </li>
+                </ul>
+              </div>
             </div>
-            <ul class="space-y-3 text-gray-700">
-              <li class="flex items-start">
-                <span class="text-blue-600 mr-2">•</span>
-                <span>Expertise in stage management and production coordination</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-blue-600 mr-2">•</span>
-                <span>Proficient in lighting design, sound design, and technical direction</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-blue-600 mr-2">•</span>
-                <span>Experience with set construction and scenic design</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-blue-600 mr-2">•</span>
-                <span>Knowledge of theatre safety protocols and equipment operation</span>
-              </li>
-              <li class="flex items-start">
-                <span class="text-blue-600 mr-2">•</span>
-                <span>Ability to manage multiple technical aspects of theatrical productions</span>
-              </li>
-            </ul>
-          </UCard>
+          </div>
         </div>
       </UContainer>
     </section>

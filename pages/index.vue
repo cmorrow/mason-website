@@ -9,10 +9,10 @@
           <!-- Text on left -->
           <div class="space-y-8 text-white">
             <h1
-              class="text-6xl md:text-7xl lg:text-8xl font-bold leading-tight"
+              class="font-bold leading-tight"
             >
-              <span class="block">Mason</span>
-              <span class="block">Morrow</span>
+              <span class="block text-[5.25rem] md:text-[6.3rem] lg:text-[8.4rem] bg-gradient-to-r from-white via-blue-50 to-white bg-clip-text text-transparent drop-shadow-lg">Mason</span>
+              <span class="block text-6xl md:text-7xl lg:text-8xl bg-gradient-to-r from-blue-100 via-white to-blue-100 bg-clip-text text-transparent drop-shadow-lg">Morrow</span>
             </h1>
             <p
               class="text-2xl md:text-3xl text-blue-100 font-light leading-relaxed"
@@ -30,16 +30,6 @@
                 and original playwriting.
               </p>
             </div>
-            <div class="pt-4">
-              <UButton
-                to="/contact"
-                size="xl"
-                color="blue"
-                class="bg-blue-500 hover:bg-blue-400 text-white font-semibold px-8 py-4 rounded-lg shadow-lg"
-              >
-                Work With Me
-              </UButton>
-            </div>
           </div>
 
           <!-- Image on right with glow effect -->
@@ -54,39 +44,6 @@
                   box-shadow: 0 0 80px rgba(59, 130, 246, 0.2);
                 "
               />
-              <!-- Annotation -->
-              <div
-                class="absolute -bottom-4 -left-8 transform rotate-[-5deg] z-10"
-              >
-                <div class="relative">
-                  <svg
-                    class="w-32 h-32 text-yellow-400"
-                    viewBox="0 0 100 100"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M20 80 Q40 60 60 70 T100 50"
-                      stroke="currentColor"
-                      stroke-width="3"
-                      fill="none"
-                      stroke-linecap="round"
-                    />
-                    <path
-                      d="M95 45 L100 50 L95 55"
-                      stroke="currentColor"
-                      stroke-width="3"
-                      fill="none"
-                      stroke-linecap="round"
-                    />
-                  </svg>
-                  <p
-                    class="absolute top-2 left-4 text-white font-bold text-xl handwritten"
-                  >
-                    Hi! I'm Mason
-                  </p>
-                </div>
-              </div>
             </div>
           </div>
         </div>
@@ -104,48 +61,83 @@
     </section>
 
     <!-- Feature List -->
-    <section class="py-20 bg-white">
+    <section class="py-24 bg-blue-50 w-full">
       <UContainer>
-        <h2 class="text-4xl font-bold text-blue-900 text-center mb-12">
+        <h2
+          class="text-4xl md:text-5xl font-bold text-blue-900 mb-16 text-center"
+        >
           What I Do
         </h2>
-        <div class="grid md:grid-cols-3 gap-8">
-          <UCard
-            class="text-center p-8 hover:shadow-lg transition-shadow border border-gray-100"
-          >
-            <div class="text-5xl mb-4">🎭</div>
-            <h3 class="text-2xl font-bold text-blue-900 mb-4">
-              Theatre Education
-            </h3>
-            <p class="text-gray-700">
-              Inspiring and mentoring students in the art of theatre, helping
-              them discover their creative potential and develop their craft.
-            </p>
-          </UCard>
 
-          <UCard
-            class="text-center p-8 hover:shadow-lg transition-shadow border border-gray-100"
-          >
-            <div class="text-5xl mb-4">🎬</div>
-            <h3 class="text-2xl font-bold text-blue-900 mb-4">Performance</h3>
-            <p class="text-gray-700">
-              Bringing characters to life on stage with passion, dedication, and
-              a commitment to authentic storytelling.
-            </p>
-          </UCard>
+        <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
+            <!-- Theatre Education -->
+            <div class="relative group">
+              <div
+                class="bg-white rounded-2xl p-8 md:p-10 shadow-lg hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-100 hover:border-blue-200"
+              >
+                <div class="mb-6">
+                  <div
+                    class="w-20 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mb-6"
+                  ></div>
+                  <h3
+                    class="text-2xl md:text-3xl font-bold text-blue-900 mb-4"
+                  >
+                    Theatre Education
+                  </h3>
+                </div>
+                <p class="text-gray-700 leading-relaxed flex-grow">
+                  Inspiring and mentoring students in the art of theatre,
+                  helping them discover their creative potential and develop
+                  their craft.
+                </p>
+              </div>
+            </div>
 
-          <UCard
-            class="text-center p-8 hover:shadow-lg transition-shadow border border-gray-100"
-          >
-            <div class="text-5xl mb-4">✍️</div>
-            <h3 class="text-2xl font-bold text-blue-900 mb-4">Playwriting</h3>
-            <p class="text-gray-700">
-              Creating original theatrical works that explore human experiences,
-              challenge perspectives, and engage audiences in meaningful
-              dialogue.
-            </p>
-          </UCard>
-        </div>
+            <!-- Performance -->
+            <div class="relative group">
+              <div
+                class="bg-white rounded-2xl p-8 md:p-10 shadow-lg hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-100 hover:border-blue-200"
+              >
+                <div class="mb-6">
+                  <div
+                    class="w-20 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mb-6"
+                  ></div>
+                  <h3
+                    class="text-2xl md:text-3xl font-bold text-blue-900 mb-4"
+                  >
+                    Performance
+                  </h3>
+                </div>
+                <p class="text-gray-700 leading-relaxed flex-grow">
+                  Bringing characters to life on stage with passion,
+                  dedication, and a commitment to authentic storytelling.
+                </p>
+              </div>
+            </div>
+
+            <!-- Playwriting -->
+            <div class="relative group">
+              <div
+                class="bg-white rounded-2xl p-8 md:p-10 shadow-lg hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-100 hover:border-blue-200"
+              >
+                <div class="mb-6">
+                  <div
+                    class="w-20 h-1 bg-gradient-to-r from-blue-600 to-blue-400 mb-6"
+                  ></div>
+                  <h3
+                    class="text-2xl md:text-3xl font-bold text-blue-900 mb-4"
+                  >
+                    Playwriting
+                  </h3>
+                </div>
+                <p class="text-gray-700 leading-relaxed flex-grow">
+                  Creating original theatrical works that explore human
+                  experiences, challenge perspectives, and engage audiences
+                  in meaningful dialogue.
+                </p>
+              </div>
+            </div>
+          </div>
       </UContainer>
     </section>
   </div>

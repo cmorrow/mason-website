@@ -24,14 +24,6 @@
           >
             {{ link.label }}
           </NuxtLink>
-          <UButton 
-            to="/contact"
-            color="blue"
-            size="sm"
-            class="ml-4 bg-blue-500 hover:bg-blue-400"
-          >
-            Work With Me
-          </UButton>
         </div>
 
         <!-- Mobile Menu Button -->
@@ -69,15 +61,6 @@
           >
             {{ link.label }}
           </NuxtLink>
-          <UButton 
-            to="/contact"
-            color="blue"
-            size="sm"
-            class="mt-2 bg-blue-500 hover:bg-blue-400"
-            @click="mobileMenuOpen = false"
-          >
-            Work With Me
-          </UButton>
         </div>
       </div>
     </UContainer>

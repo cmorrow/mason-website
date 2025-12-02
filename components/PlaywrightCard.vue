@@ -68,12 +68,6 @@
                 : 'md:col-span-2'
             "
           >
-            <!-- Blue accent box for alternating items -->
-            <div
-              v-if="index % 2 === 0"
-              class="absolute top-0 right-0 w-32 h-32 bg-blue-600 opacity-10 rounded-bl-full"
-            ></div>
-
             <div class="relative z-10">
               <h2
                 class="text-4xl md:text-5xl font-bold text-blue-900 mb-6 leading-tight"
