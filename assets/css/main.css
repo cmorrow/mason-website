@@ -39,9 +39,15 @@ h6 {
   background: linear-gradient(135deg, #1e40af 0%, #3b82f6 100%);
 }
 
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
+/* Text selection highlight */
+::selection {
+  background-color: #dbeafe; /* Very light blue */
+  color: inherit;
+}
+
+::-moz-selection {
+  background-color: #dbeafe; /* Very light blue */
+  color: inherit;
 }
 
 /* Chevron Pattern Background */

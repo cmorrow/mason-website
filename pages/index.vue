@@ -71,9 +71,9 @@
 
         <div class="grid md:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <!-- Theatre Education -->
-            <div class="relative group">
+            <NuxtLink to="/resume" class="relative group block">
               <div
-                class="bg-white rounded-2xl p-8 md:p-10 shadow-lg hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-100 hover:border-blue-200"
+                class="bg-white rounded-2xl p-8 md:p-10 shadow-lg hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-100 hover:border-blue-200 cursor-pointer"
               >
                 <div class="mb-6">
                   <div
@@ -91,12 +91,12 @@
                   their craft.
                 </p>
               </div>
-            </div>
+            </NuxtLink>
 
             <!-- Performance -->
-            <div class="relative group">
+            <NuxtLink to="/performance" class="relative group block">
               <div
-                class="bg-white rounded-2xl p-8 md:p-10 shadow-lg hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-100 hover:border-blue-200"
+                class="bg-white rounded-2xl p-8 md:p-10 shadow-lg hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-100 hover:border-blue-200 cursor-pointer"
               >
                 <div class="mb-6">
                   <div
@@ -113,12 +113,12 @@
                   dedication, and a commitment to authentic storytelling.
                 </p>
               </div>
-            </div>
+            </NuxtLink>
 
             <!-- Playwriting -->
-            <div class="relative group">
+            <NuxtLink to="/playwright" class="relative group block">
               <div
-                class="bg-white rounded-2xl p-8 md:p-10 shadow-lg hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-100 hover:border-blue-200"
+                class="bg-white rounded-2xl p-8 md:p-10 shadow-lg hover:shadow-2xl transition-all duration-300 h-full flex flex-col border border-gray-100 hover:border-blue-200 cursor-pointer"
               >
                 <div class="mb-6">
                   <div
@@ -136,7 +136,7 @@
                   in meaningful dialogue.
                 </p>
               </div>
-            </div>
+            </NuxtLink>
           </div>
       </UContainer>
     </section>

@@ -14,12 +14,12 @@
         <div class="py-12 text-center">
           <p class="text-lg font-semibold mb-2">Mason Morrow</p>
           <p class="text-blue-200 mb-4">Theatre Educator, Performer, Playwright</p>
-          <a 
-            href="mailto:themasonmorrow@gmail.com" 
-            class="text-blue-300 hover:text-white transition-colors"
+          <NuxtLink 
+            to="/contact" 
+            class="text-blue-300 hover:text-white transition-colors inline-block"
           >
-            themasonmorrow@gmail.com
-          </a>
+            Contact
+          </NuxtLink>
         </div>
       </UContainer>
     </footer>
