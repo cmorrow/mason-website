@@ -7,6 +7,9 @@ export default defineNuxtConfig({
     icons: ['heroicons']
   },
   css: ['~/assets/css/main.css'],
+  nitro: {
+    preset: 'static'
+  },
   app: {
     head: {
       title: 'Mason Morrow - Theatre Educator, Performer, Playwright',
