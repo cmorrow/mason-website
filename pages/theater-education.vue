@@ -150,7 +150,7 @@ const educationItems = [
     title: "Sensory Story with kindergarten",
     description:
       "A multi-sensory storytelling experience designed for kindergarten students, engaging all senses to create an inclusive and memorable learning adventure.",
-    image: "images/education/sensory-story-kindergarten-01.jpg",
+    image: "/images/education/sensory-story-kindergarten-01.jpg",
   },
 ];
 

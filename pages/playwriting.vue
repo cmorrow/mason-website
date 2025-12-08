@@ -23,7 +23,7 @@
           <PlaywrightCard :play="plays[0]" :index="0">
             <template #image>
               <img
-                src="/images/olive-clash.png"
+                src="/images/Olive-Clash.png"
                 alt="Olive and The Cosmic Clash"
                 class="w-full h-full object-cover rounded-lg shadow-lg"
               />
