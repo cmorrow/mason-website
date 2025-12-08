@@ -15,7 +15,7 @@
           <!-- Photo Container (optional) -->
           <div
             v-if="play.photos && play.photos.length > 0"
-            class="relative min-h-[400px] md:min-h-[500px] overflow-hidden group cursor-pointer"
+            class="relative aspect-[4/3] overflow-hidden group cursor-pointer"
             :class="index % 2 === 1 ? 'md:col-start-2' : ''"
             @click="openLightbox(0)"
           >
@@ -94,7 +94,7 @@
               </div>
 
               <!-- Inline Image Slot -->
-              <div class="mb-8">
+              <div class="mb-8 aspect-[4/3] overflow-hidden rounded-lg">
                 <slot name="image"></slot>
               </div>
 

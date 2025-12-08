@@ -23,21 +23,24 @@
 
             <!-- Overlapping tagline -->
             <div class="relative -mt-4 lg:-mt-8">
-              <p
-                class="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-800 leading-tight"
+              <NuxtLink
+                to="/theater-education"
+                class="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-800 leading-tight hover:text-blue-900 hover:underline transition-colors duration-300 block"
               >
                 Theatre Educator
-              </p>
-              <p
-                class="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-700 leading-tight mt-2"
+              </NuxtLink>
+              <NuxtLink
+                to="/performance"
+                class="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-700 leading-tight mt-2 hover:text-blue-800 hover:underline transition-colors duration-300 block"
               >
                 Performer
-              </p>
-              <p
-                class="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-600 leading-tight mt-2"
+              </NuxtLink>
+              <NuxtLink
+                to="/playwright"
+                class="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-600 leading-tight mt-2 hover:text-blue-700 hover:underline transition-colors duration-300 block"
               >
                 Playwright
-              </p>
+              </NuxtLink>
             </div>
           </div>
 
@@ -108,42 +111,36 @@
           <!-- Large Card - Theatre Education -->
           <NuxtLink
             to="/theater-education"
-            class="md:col-span-2 lg:col-span-1 lg:row-span-2 group relative overflow-hidden bg-black text-white rounded-lg p-8 md:p-12 lg:p-16 min-h-[400px] flex flex-col justify-between hover:scale-[1.02] transition-transform duration-500"
+            class="md:col-span-2 lg:col-span-1 lg:row-span-2 group relative overflow-hidden bg-black text-white rounded-lg p-8 md:p-12 lg:p-16 aspect-[4/3] flex flex-col hover:scale-[1.02] transition-transform duration-500"
           >
             <!-- Background Image Overlay -->
             <div
-              class="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity duration-500"
+              class="absolute inset-0 opacity-40 group-hover:opacity-70 transition-opacity duration-500"
             >
               <img
-                src="/images/mason-1-6.jpg"
+                src="/images/education/education-vertical-kindergarten.jpg"
                 alt="Theatre Education"
                 class="w-full h-full object-cover"
               />
             </div>
 
-            <!-- Title at top-left -->
-            <div class="relative z-10">
-              <h3 class="text-3xl md:text-4xl font-black mb-4 leading-tight">
+            <!-- Title centered in middle -->
+            <div
+              class="relative z-10 flex-1 flex items-center justify-start text-left"
+            >
+              <h3 class="text-3xl md:text-4xl font-black leading-tight">
                 THEATRE<br />EDUCATION
               </h3>
             </div>
-
-            <!-- Description at bottom -->
-            <p
-              class="relative z-10 text-lg md:text-xl text-white/90 leading-relaxed font-light mt-auto"
-            >
-              Inspiring and mentoring students in the art of theatre, helping
-              them discover their creative potential and develop their craft.
-            </p>
           </NuxtLink>
 
           <!-- Medium Card - Performance -->
           <NuxtLink
             to="/performance"
-            class="md:col-span-1 lg:col-span-1 group relative overflow-hidden rounded-lg min-h-[300px] flex flex-col justify-between hover:scale-[1.02] transition-transform duration-500"
+            class="md:col-span-1 lg:col-span-1 group relative overflow-hidden rounded-lg aspect-[4/3] flex flex-col hover:scale-[1.02] transition-transform duration-500"
           >
             <img
-              src="/images/mason-44.jpg"
+              src="/images/performance/lucky-stiff-02.jpg"
               alt="Performance"
               class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
             />
@@ -151,27 +148,20 @@
               class="absolute inset-0 bg-gradient-to-t from-blue-950/90 via-blue-950/50 to-transparent"
             ></div>
 
-            <!-- Title at top-left -->
-            <div class="relative z-10 p-8 md:p-10">
+            <!-- Title at bottom -->
+            <div class="relative z-10 p-8 md:p-10 mt-auto">
               <h3
-                class="text-2xl md:text-3xl font-black mb-4 leading-tight text-white"
+                class="text-2xl md:text-3xl font-black leading-tight text-white"
               >
                 PERFORMANCE
               </h3>
             </div>
-            <!-- Description at bottom -->
-            <p
-              class="relative z-10 text-base md:text-lg text-white/90 leading-relaxed font-light p-8 md:p-10 mt-auto"
-            >
-              Bringing characters to life on stage with passion, dedication, and
-              authentic storytelling.
-            </p>
           </NuxtLink>
 
           <!-- Small Card - Playwriting -->
           <NuxtLink
             to="/playwright"
-            class="md:col-span-1 lg:col-span-1 group relative overflow-hidden rounded-lg min-h-[300px] flex flex-col justify-between hover:scale-[1.02] transition-transform duration-500"
+            class="md:col-span-1 lg:col-span-1 group relative overflow-hidden rounded-lg aspect-[4/3] flex flex-col hover:scale-[1.02] transition-transform duration-500"
           >
             <img
               src="/images/education/cosmic-clash-01-4x3.jpg"
@@ -184,21 +174,14 @@
               class="absolute inset-0 bg-gradient-to-t from-blue-950/95 via-blue-950/70 to-blue-950/40"
             ></div>
 
-            <!-- Title at top-left -->
-            <div class="relative z-10 p-8 md:p-10">
+            <!-- Title at bottom -->
+            <div class="relative z-10 p-8 md:p-10 mt-auto">
               <h3
-                class="text-2xl md:text-3xl font-black mb-4 leading-tight text-white"
+                class="text-2xl md:text-3xl font-black leading-tight text-white"
               >
                 PLAYWRITING
               </h3>
             </div>
-            <!-- Description at bottom -->
-            <p
-              class="relative z-10 text-base md:text-lg text-white/90 leading-relaxed font-light p-8 md:p-10 mt-auto"
-            >
-              Creating original theatrical works that explore human experiences
-              and engage audiences.
-            </p>
           </NuxtLink>
 
           <!-- Wide Card - Call to Action -->

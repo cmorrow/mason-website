@@ -24,7 +24,7 @@
       <UContainer>
         <div class="max-w-7xl mx-auto">
           <!-- Gallery Grid -->
-          <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div class="grid md:grid-cols-2 gap-8">
             <div
               v-for="(item, index) in educationItems"
               :key="index"
@@ -33,7 +33,7 @@
               <!-- Image Container -->
               <div
                 v-if="item.image"
-                class="relative h-64 md:h-72 overflow-hidden"
+                class="relative aspect-[4/3] overflow-hidden"
               >
                 <img
                   :src="getImageSrc(item.image)"

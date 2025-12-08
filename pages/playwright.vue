@@ -24,11 +24,11 @@
       <UContainer>
         <div class="max-w-6xl mx-auto space-y-12">
           <PlaywrightCard :play="plays[0]" :index="0"
-            ><template #image>
+            >            <template #image>
               <img
                 src="/images/education/cosmic-clash-01-16x9.jpg"
                 alt="Olive and The Cosmic Clash"
-                class="w-full rounded-lg shadow-lg"
+                class="w-full h-full object-cover rounded-lg shadow-lg"
               />
             </template>
             <template #description
