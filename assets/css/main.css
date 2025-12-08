@@ -15,6 +15,10 @@ body {
     sans-serif;
 }
 
+p {
+  @apply text-lg md:text-xl text-gray-700 leading-relaxed mb-6;
+}
+
 /* Stylized fonts for headings */
 h1,
 h2,

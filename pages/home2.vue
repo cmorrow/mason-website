@@ -114,7 +114,7 @@
         <!-- Large Photo - Full Width -->
         <div class="w-full">
           <img
-            src="/mason-56.jpg"
+            src="/images/mason-56.jpg"
             alt="Mason Morrow"
             class="w-full h-auto object-cover"
           />

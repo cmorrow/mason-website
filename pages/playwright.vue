@@ -23,18 +23,37 @@
     <section class="py-20 bg-white">
       <UContainer>
         <div class="max-w-6xl mx-auto space-y-12">
-          <PlaywrightCard
-            :play="plays[0]"
-            :index="0"
-          />
-          <PlaywrightCard
-            :play="plays[1]"
-            :index="1"
-          />
-          <PlaywrightCard
-            :play="plays[2]"
-            :index="2"
-          />
+          <PlaywrightCard :play="plays[0]" :index="0"
+            ><template #image>
+              <img
+                src="/images/education/cosmic-clash-01-16x9.jpg"
+                alt="Olive and The Cosmic Clash"
+                class="w-full rounded-lg shadow-lg"
+              />
+            </template>
+            <template #description
+              ><p>
+                Olive &amp; The Cosmic Clash is a TFYA touring show for
+                elementary audiences. I proposed this piece to CLIMB Theatre as
+                part of their 25-26 season, with the goal of teaching kids both
+                empathy and self-regulation. CLIMB commissioned me to write this
+                play, which included developing the piece through workshops by
+                incorporating feedback from readings into subsequent drafts. The
+                play is currently one of CLIMB's assembly offerings, and will
+                remain in my ownership after their season concludes.
+              </p>
+              <p>
+                The play follows Olive, a young artist, and the Sun and Moon who
+                have crashed into her backyard fighting. Olive proposes they
+                switch jobs for one day, and chaos ensues as the Moon tries to
+                run daytime and the Sun tries to run nighttime. Throughout the
+                play, Olive uses a learning device (STAR) that walks through a
+                step-by-step process to apologize to someone you've hurt. At the
+                end of the play, the Sun and Moon use STAR to apologize to each
+                other, forgive each other, and become friends.
+              </p></template
+            ></PlaywrightCard
+          >
         </div>
       </UContainer>
     </section>
@@ -53,9 +72,11 @@
               Original Storytelling
             </h2>
             <p class="text-lg text-gray-700 leading-relaxed">
-              Each play represents a journey into the human experience, exploring themes of connection, 
-              legacy, and the transformative power of theatre. Through original storytelling, these works 
-              challenge perspectives and invite audiences to see the world through new eyes.
+              Each play represents a journey into the human experience,
+              exploring themes of connection, legacy, and the transformative
+              power of theatre. Through original storytelling, these works
+              challenge perspectives and invite audiences to see the world
+              through new eyes.
             </p>
           </div>
         </div>
@@ -67,32 +88,12 @@
 <script setup>
 const plays = [
   {
-    title: "The Stage Between",
-    genre: "Drama",
+    title: "Olive and The Cosmic Clash",
+    genre: "Theatre for Youth",
     duration: "2 Acts | 90 minutes",
-    description:
-      "A poignant exploration of the relationships between teachers and students, set against the backdrop of a high school theatre program. The play examines the transformative power of mentorship and the complex dynamics that emerge when personal boundaries blur in the pursuit of artistic excellence. Through a series of interconnected scenes, we witness how the stage becomes a space for both performance and genuine human connection.",
+    description: "",
     cast: "6 characters (3M, 3F)",
-    setting: "High school theatre",
-  },
-  {
-    title: "Echoes in the Wings",
-    genre: "Comedy-Drama",
-    duration: "1 Act | 60 minutes",
-    description:
-      'A backstage comedy that follows a group of actors during opening night of a community theatre production. As mishaps and misunderstandings unfold, the play reveals the humanity behind the characters we see on stage. With sharp wit and heartfelt moments, "Echoes in the Wings" celebrates the chaos and camaraderie that define theatrical life, reminding us that sometimes the real drama happens when the curtain is down.',
-    cast: "8 characters (4M, 4F)",
-    setting: "Theatre backstage",
-  },
-  {
-    title: "The Last Rehearsal",
-    genre: "Drama",
-    duration: "3 Acts | 120 minutes",
-    description:
-      "An intimate family drama that unfolds during the final rehearsal of a play written by a playwright facing a terminal diagnosis. As the cast gathers for what may be the last time, long-buried secrets surface, relationships are tested, and the line between art and life becomes increasingly blurred. This powerful work examines legacy, loss, and the enduring impact of storytelling, asking what we leave behind when the final curtain falls.",
-    cast: "5 characters (2M, 3F)",
-    setting: "Rehearsal space",
+    setting: "The Cosmos",
   },
 ];
 </script>
-

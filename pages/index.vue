@@ -51,9 +51,9 @@
                 class="absolute -inset-4 bg-blue-900/5 rotate-3 rounded-lg"
               ></div>
               <img
-                src="/mason-56.jpg"
+                src="/images/headshots/Mason-Morrow-headshot-01.jpg"
                 alt="Mason Morrow"
-                class="relative w-full h-[500px] lg:h-[700px] object-cover rounded-lg shadow-2xl"
+                class="relative w-full h-auto lg:h-[700px] object-contain lg:object-cover rounded-lg shadow-2xl"
                 style="object-position: center top"
               />
               <!-- Accent overlay -->
@@ -66,13 +66,26 @@
 
         <!-- Bottom description - Full width but offset -->
         <div class="mt-12 lg:mt-20 lg:ml-0 lg:w-2/3">
-          <p
-            class="text-lg md:text-xl lg:text-2xl text-blue-800/80 leading-relaxed font-light"
+          <blockquote
+            class="personal-quote text-lg md:text-xl lg:text-2xl text-blue-800/90 leading-relaxed font-light italic relative pl-8 md:pl-12 lg:pl-16 py-6 md:py-8"
           >
-            Bringing stories to life on stage and inspiring the next generation
-            of theatre artists through education, performance, and original
-            playwriting.
-          </p>
+            <span
+              class="quote-mark absolute left-0 top-0 text-6xl md:text-7xl lg:text-8xl text-blue-900/20 font-serif leading-none"
+              >"</span
+            >
+            <span class="relative z-10">
+              Hello! I'm Mason Morrow, a theatre artist and educator passionate
+              about supporting the growth of youth. I have training and
+              professional experience in teaching artistry, performance,
+              playwriting, directing, and stage management. I believe in the
+              power of play, and apply it to all my work as a means of fostering
+              development, empathy, and connection to ourselves and each other.
+            </span>
+            <span
+              class="quote-mark absolute right-0 bottom-0 text-6xl md:text-7xl lg:text-8xl text-blue-900/20 font-serif leading-none transform rotate-180"
+              >"</span
+            >
+          </blockquote>
         </div>
       </UContainer>
     </section>
@@ -94,7 +107,7 @@
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
           <!-- Large Card - Theatre Education -->
           <NuxtLink
-            to="/resume"
+            to="/theater-education"
             class="md:col-span-2 lg:col-span-1 lg:row-span-2 group relative overflow-hidden bg-black text-white rounded-lg p-8 md:p-12 lg:p-16 min-h-[400px] flex flex-col justify-between hover:scale-[1.02] transition-transform duration-500"
           >
             <!-- Background Image Overlay -->
@@ -102,7 +115,7 @@
               class="absolute inset-0 opacity-20 group-hover:opacity-30 transition-opacity duration-500"
             >
               <img
-                src="/mason-1-6.jpg"
+                src="/images/mason-1-6.jpg"
                 alt="Theatre Education"
                 class="w-full h-full object-cover"
               />
@@ -130,7 +143,7 @@
             class="md:col-span-1 lg:col-span-1 group relative overflow-hidden rounded-lg min-h-[300px] flex flex-col justify-between hover:scale-[1.02] transition-transform duration-500"
           >
             <img
-              src="/mason-44.jpg"
+              src="/images/mason-44.jpg"
               alt="Performance"
               class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
             />
@@ -158,15 +171,30 @@
           <!-- Small Card - Playwriting -->
           <NuxtLink
             to="/playwright"
-            class="md:col-span-1 lg:col-span-1 group relative overflow-hidden bg-blue-950 text-white rounded-lg p-8 md:p-10 min-h-[300px] flex flex-col justify-between hover:scale-[1.02] transition-transform duration-500"
+            class="md:col-span-1 lg:col-span-1 group relative overflow-hidden rounded-lg min-h-[300px] flex flex-col justify-between hover:scale-[1.02] transition-transform duration-500"
           >
+            <img
+              src="/images/education/cosmic-clash-01-4x3.jpg"
+              alt="Playwriting"
+              class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
+            />
+            <!-- Dark overlay for better text legibility -->
+            <div class="absolute inset-0 bg-black/40"></div>
+            <div
+              class="absolute inset-0 bg-gradient-to-t from-blue-950/95 via-blue-950/70 to-blue-950/40"
+            ></div>
+
             <!-- Title at top-left -->
-            <h3 class="text-2xl md:text-3xl font-black mb-4 leading-tight">
-              PLAYWRITING
-            </h3>
+            <div class="relative z-10 p-8 md:p-10">
+              <h3
+                class="text-2xl md:text-3xl font-black mb-4 leading-tight text-white"
+              >
+                PLAYWRITING
+              </h3>
+            </div>
             <!-- Description at bottom -->
             <p
-              class="text-base md:text-lg text-white/90 leading-relaxed font-light mt-auto"
+              class="relative z-10 text-base md:text-lg text-white/90 leading-relaxed font-light p-8 md:p-10 mt-auto"
             >
               Creating original theatrical works that explore human experiences
               and engage audiences.
@@ -175,7 +203,7 @@
 
           <!-- Wide Card - Call to Action -->
           <div
-            class="md:col-span-2 lg:col-span-2 relative overflow-hidden bg-gradient-to-r from-blue-950 to-blue-900 rounded-lg p-8 md:p-12 lg:p-16 min-h-[250px] flex items-center"
+            class="md:col-span-2 lg:col-span-2 relative overflow-hidden bg-gradient-to-r from-blue-950 to-blue-700 rounded-lg p-8 md:p-12 lg:p-16 min-h-[250px] flex items-center"
           >
             <div class="flex-1">
               <h3 class="text-3xl md:text-4xl font-black text-white mb-4">
@@ -192,10 +220,6 @@
                 CONTACT ME
               </NuxtLink>
             </div>
-            <!-- Decorative element -->
-            <div
-              class="hidden lg:block absolute right-0 top-0 bottom-0 w-64 bg-white/5"
-            ></div>
           </div>
         </div>
       </UContainer>
@@ -257,5 +281,46 @@ useHead({
 }
 .group:nth-child(4) {
   animation-delay: 0.4s;
+}
+
+/* Personal blockquote styling */
+.personal-quote {
+  position: relative;
+  border-left: 4px solid rgba(30, 64, 175, 0.3);
+  background: linear-gradient(
+    to right,
+    rgba(59, 130, 246, 0.05) 0%,
+    transparent 100%
+  );
+  border-radius: 0 8px 8px 0;
+  font-style: italic;
+  transition: all 0.3s ease;
+}
+
+.personal-quote:hover {
+  border-left-color: rgba(30, 64, 175, 0.5);
+  background: linear-gradient(
+    to right,
+    rgba(59, 130, 246, 0.08) 0%,
+    transparent 100%
+  );
+  transform: translateX(4px);
+}
+
+.personal-quote .quote-mark {
+  font-family: Georgia, "Times New Roman", serif;
+  user-select: none;
+  pointer-events: none;
+  font-weight: 400;
+}
+
+.personal-quote .quote-mark:first-child {
+  top: -0.1em;
+  left: 0.05em;
+}
+
+.personal-quote .quote-mark:last-child {
+  bottom: -0.3em;
+  right: 0.1em;
 }
 </style>

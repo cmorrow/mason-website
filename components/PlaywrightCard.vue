@@ -35,7 +35,7 @@
               <div class="absolute bottom-6 left-6 z-10">
                 <button
                   @click.stop="openLightbox(0)"
-                  class="bg-blue-900/95 hover:bg-blue-800 text-white px-8 py-4 rounded-lg shadow-xl transition-all backdrop-blur-sm font-semibold text-lg flex items-center gap-2 group/btn"
+                  class="bg-blue-950/95 hover:bg-blue-900 text-white px-8 py-4 rounded-lg shadow-xl transition-all backdrop-blur-sm font-semibold text-lg flex items-center gap-2 group/btn"
                   aria-label="View gallery"
                 >
                   <span>View Gallery</span>
@@ -93,10 +93,19 @@
                 </span>
               </div>
 
+              <!-- Inline Image Slot -->
+              <div class="mb-8">
+                <slot name="image"></slot>
+              </div>
+
               <!-- Description -->
-              <p class="text-lg md:text-xl text-gray-700 leading-relaxed mb-8">
-                {{ play.description }}
-              </p>
+              <div
+                class="text-lg md:text-xl text-gray-700 leading-relaxed mb-8"
+              >
+                <slot name="description">
+                  <p>{{ play.description }}</p>
+                </slot>
+              </div>
 
               <!-- Additional info box (Cast and Setting) -->
               <div
@@ -104,10 +113,10 @@
                 class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 border-l-4 border-blue-600"
               >
                 <div class="space-y-2">
-                  <p v-if="play.cast" class="text-sm text-gray-700">
+                  <p v-if="play.cast" class="text-sm text-gray-700 mb-0">
                     <strong class="text-blue-900">Cast:</strong> {{ play.cast }}
                   </p>
-                  <p v-if="play.setting" class="text-sm text-gray-700">
+                  <p v-if="play.setting" class="text-sm text-gray-700 mb-0">
                     <strong class="text-blue-900">Setting:</strong>
                     {{ play.setting }}
                   </p>

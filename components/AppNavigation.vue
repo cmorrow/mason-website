@@ -91,9 +91,10 @@ const mobileMenuOpen = ref(false)
 
 const navLinks = [
   { label: 'Home', path: '/' },
-  { label: 'Resume', path: '/resume' },
+  { label: 'Theater Education', path: '/theater-education' },
   { label: 'Performance', path: '/performance' },
   { label: 'Playwright', path: '/playwright' },
+  { label: 'Resume', path: '/resume' },
   { label: 'Contact', path: '/contact' }
 ]
 
