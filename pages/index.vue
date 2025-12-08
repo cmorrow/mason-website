@@ -111,7 +111,7 @@
           <!-- Large Card - Theatre Education -->
           <NuxtLink
             to="/theater-education"
-            class="md:col-span-2 lg:col-span-1 lg:row-span-2 group relative overflow-hidden bg-black text-white rounded-lg p-8 md:p-12 lg:p-16 aspect-[4/3] flex flex-col hover:scale-[1.02] transition-transform duration-500"
+            class="md:col-span-2 lg:col-span-1 lg:row-span-2 group relative overflow-hidden bg-black text-white rounded-lg p-8 md:p-12 lg:p-16 min-h-[400px] flex flex-col hover:scale-[1.02] transition-transform duration-500"
           >
             <!-- Background Image Overlay -->
             <div
