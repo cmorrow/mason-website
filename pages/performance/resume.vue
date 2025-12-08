@@ -12,9 +12,9 @@
           <h1 class="text-6xl md:text-7xl font-bold mb-6 tracking-tight">
             PERFORMANCE RESUME
           </h1>
-          <HeroTagline
+          <!-- <HeroTagline
             text="A comprehensive overview of theatrical performances, training, and skills."
-          />
+          /> -->
           <div class="mt-8">
             <a
               href="/resume/Mason-Morrow-Performance-Resume.pdf"

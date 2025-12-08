@@ -12,9 +12,9 @@
           <h1 class="text-6xl md:text-7xl font-bold mb-6 tracking-tight">
             THEATER EDUCATION
           </h1>
-          <HeroTagline
+          <!-- <HeroTagline
             text="Inspiring and mentoring students in the art of theatre, helping them discover their creative potential and develop their craft"
-          />
+          /> -->
         </div>
       </UContainer>
     </section>

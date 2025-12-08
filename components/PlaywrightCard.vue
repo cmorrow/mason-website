@@ -99,28 +99,10 @@
               </div>
 
               <!-- Description -->
-              <div
-                class="text-lg md:text-xl text-gray-700 leading-relaxed mb-8"
-              >
+              <div class="text-lg md:text-xl text-gray-700 leading-relaxed">
                 <slot name="description">
                   <p>{{ play.description }}</p>
                 </slot>
-              </div>
-
-              <!-- Additional info box (Cast and Setting) -->
-              <div
-                v-if="play.cast || play.setting"
-                class="bg-gradient-to-br from-blue-50 to-blue-100 rounded-lg p-6 border-l-4 border-blue-600"
-              >
-                <div class="space-y-2">
-                  <p v-if="play.cast" class="text-sm text-gray-700 mb-0">
-                    <strong class="text-blue-900">Cast:</strong> {{ play.cast }}
-                  </p>
-                  <p v-if="play.setting" class="text-sm text-gray-700 mb-0">
-                    <strong class="text-blue-900">Setting:</strong>
-                    {{ play.setting }}
-                  </p>
-                </div>
               </div>
             </div>
           </div>

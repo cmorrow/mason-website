@@ -12,9 +12,9 @@
           <h1 class="text-6xl md:text-7xl font-bold mb-6 tracking-tight">
             PERFORMANCE
           </h1>
-          <HeroTagline
+          <!-- <HeroTagline
             text="A gallery of theatrical performances showcasing diverse roles, creative challenges, and artistic growth."
-          />
+          /> -->
         </div>
       </UContainer>
     </section>
@@ -41,13 +41,91 @@
                 ]"
               >
                 <div
-                  class="w-full h-full max-h-[80vh] flex items-center justify-center"
+                  class="relative w-full h-full max-h-[80vh] flex items-center justify-center group"
+                  @mouseenter="hoveredImageIndex = index"
+                  @mouseleave="hoveredImageIndex = null"
                 >
-                  <img
-                    :src="performance.image"
-                    :alt="performance.title"
-                    class="max-w-full max-h-full w-auto h-auto object-contain"
-                  />
+                  <!-- Image with cross-dissolve transition -->
+                  <div
+                    class="relative w-full h-full flex items-center justify-center"
+                  >
+                    <Transition
+                      enter-active-class="transition-opacity duration-500 ease-in-out"
+                      enter-from-class="opacity-0"
+                      enter-to-class="opacity-100"
+                      leave-active-class="transition-opacity duration-500 ease-in-out"
+                      leave-from-class="opacity-100"
+                      leave-to-class="opacity-0"
+                    >
+                      <img
+                        :key="getCurrentImageSrc(performance, index)"
+                        :src="getCurrentImageSrc(performance, index)"
+                        :alt="performance.title"
+                        class="absolute inset-0 m-auto max-w-full max-h-full w-auto h-auto object-contain"
+                      />
+                    </Transition>
+                  </div>
+
+                  <!-- Navigation Controls (only show if gallery exists and has multiple images) -->
+                  <Transition
+                    enter-active-class="transition-opacity duration-300"
+                    enter-from-class="opacity-0"
+                    enter-to-class="opacity-100"
+                    leave-active-class="transition-opacity duration-300"
+                    leave-from-class="opacity-100"
+                    leave-to-class="opacity-0"
+                  >
+                    <div
+                      v-if="
+                        performance.gallery &&
+                        performance.gallery.length > 1 &&
+                        hoveredImageIndex === index
+                      "
+                      class="absolute inset-0 flex items-center justify-between px-4 pointer-events-none"
+                    >
+                      <!-- Previous Button -->
+                      <button
+                        @click.stop="previousInlineImage(index)"
+                        class="bg-white/90 hover:bg-white text-gray-900 p-3 rounded-full shadow-lg transition-all backdrop-blur-sm pointer-events-auto"
+                        aria-label="Previous image"
+                      >
+                        <svg
+                          class="w-5 h-5 md:w-6 md:h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M15 19l-7-7 7-7"
+                          />
+                        </svg>
+                      </button>
+
+                      <!-- Next Button -->
+                      <button
+                        @click.stop="nextInlineImage(index)"
+                        class="bg-white/90 hover:bg-white text-gray-900 p-3 rounded-full shadow-lg transition-all backdrop-blur-sm pointer-events-auto"
+                        aria-label="Next image"
+                      >
+                        <svg
+                          class="w-5 h-5 md:w-6 md:h-6"
+                          fill="none"
+                          stroke="currentColor"
+                          viewBox="0 0 24 24"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M9 5l7 7-7 7"
+                          />
+                        </svg>
+                      </button>
+                    </div>
+                  </Transition>
                 </div>
               </div>
 
@@ -59,11 +137,6 @@
                 ]"
               >
                 <div class="mb-6">
-                  <span
-                    class="inline-block bg-blue-950 text-white px-4 py-2 text-xs font-bold uppercase tracking-wider mb-4"
-                  >
-                    {{ performance.badge }}
-                  </span>
                   <h2
                     class="text-4xl md:text-5xl lg:text-6xl font-black text-blue-950 mb-6 leading-tight"
                   >
@@ -84,16 +157,271 @@
                     {{ paragraph }}
                   </p>
                 </div>
+                <!-- Gallery Button for Lucky Stiff -->
+                <div
+                  v-if="performance.gallery && performance.gallery.length > 0"
+                  class="mt-8"
+                >
+                  <button
+                    @click="openGallery(index)"
+                    class="bg-blue-950 hover:bg-blue-900 text-white px-8 py-4 rounded-lg shadow-lg transition-all font-semibold text-lg flex items-center gap-2 group"
+                    aria-label="View gallery"
+                  >
+                    <span>View Gallery</span>
+                    <svg
+                      class="w-5 h-5 transition-transform group-hover:translate-x-1"
+                      fill="none"
+                      stroke="currentColor"
+                      viewBox="0 0 24 24"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M9 5l7 7-7 7"
+                      />
+                    </svg>
+                  </button>
+                </div>
               </div>
             </div>
           </article>
         </div>
       </div>
     </section>
+
+    <!-- Full Screen Gallery Slideshow -->
+    <Teleport to="body">
+      <Transition
+        enter-active-class="transition-opacity duration-300"
+        enter-from-class="opacity-0"
+        enter-to-class="opacity-100"
+        leave-active-class="transition-opacity duration-300"
+        leave-from-class="opacity-100"
+        leave-to-class="opacity-0"
+      >
+        <div
+          v-if="isGalleryOpen"
+          class="fixed inset-0 bg-black z-[9999] flex items-center justify-center"
+          @click.self="closeGallery"
+        >
+          <!-- Close Button -->
+          <button
+            @click="closeGallery"
+            class="absolute top-4 right-4 z-10 bg-white/90 hover:bg-white text-gray-900 p-3 rounded-full shadow-lg transition-all"
+            aria-label="Close gallery"
+          >
+            <svg
+              class="w-6 h-6"
+              fill="none"
+              stroke="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M6 18L18 6M6 6l12 12"
+              />
+            </svg>
+          </button>
+
+          <!-- Full Screen Image Container -->
+          <div
+            class="relative w-full h-full flex flex-col items-center justify-center p-4 md:p-8 pb-24 md:pb-32"
+          >
+            <div
+              class="relative w-full h-full flex items-center justify-center"
+            >
+              <Transition
+                enter-active-class="transition-opacity duration-300"
+                enter-from-class="opacity-0"
+                enter-to-class="opacity-100"
+                leave-active-class="transition-opacity duration-300"
+                leave-from-class="opacity-100"
+                leave-to-class="opacity-0"
+                mode="out-in"
+              >
+                <img
+                  :key="currentImageIndex"
+                  :src="currentGallery[currentImageIndex]"
+                  :alt="`${currentPerformanceTitle} - Photo ${
+                    currentImageIndex + 1
+                  }`"
+                  class="max-w-full max-h-full object-contain"
+                />
+              </Transition>
+
+              <!-- Navigation Arrows -->
+              <button
+                v-if="currentGallery.length > 1"
+                @click.stop="previousImage"
+                class="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white/95 text-gray-900 p-3 md:p-4 rounded-full shadow-md transition-all backdrop-blur-sm"
+                aria-label="Previous image"
+              >
+                <svg
+                  class="w-5 h-5 md:w-6 md:h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M15 19l-7-7 7-7"
+                  />
+                </svg>
+              </button>
+              <button
+                v-if="currentGallery.length > 1"
+                @click.stop="nextImage"
+                class="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 z-10 bg-white/80 hover:bg-white/95 text-gray-900 p-3 md:p-4 rounded-full shadow-md transition-all backdrop-blur-sm"
+                aria-label="Next image"
+              >
+                <svg
+                  class="w-5 h-5 md:w-6 md:h-6"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M9 5l7 7-7 7"
+                  />
+                </svg>
+              </button>
+            </div>
+
+            <!-- Caption with Performance Name and Role -->
+            <div
+              class="absolute bottom-8 md:bottom-12 left-1/2 -translate-x-1/2 z-10 text-center max-w-4xl px-4"
+            >
+              <div
+                class="bg-black/70 text-white px-6 py-4 rounded-lg backdrop-blur-sm"
+              >
+                <h3 class="text-xl md:text-2xl font-bold mb-2">
+                  {{ currentPerformanceTitle }}
+                </h3>
+                <p
+                  v-if="currentPerformanceRole"
+                  class="text-sm md:text-base text-gray-200"
+                >
+                  {{ currentPerformanceRole }}
+                </p>
+              </div>
+              <!-- Image Counter -->
+              <div
+                v-if="currentGallery.length > 1"
+                class="mt-3 text-white/70 text-sm"
+              >
+                {{ currentImageIndex + 1 }} / {{ currentGallery.length }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </Transition>
+    </Teleport>
   </div>
 </template>
 
 <script setup>
+const isGalleryOpen = ref(false);
+const currentImageIndex = ref(0);
+const currentGallery = ref([]);
+const currentPerformanceTitle = ref("");
+const currentPerformanceRole = ref("");
+const hoveredImageIndex = ref(null);
+const inlineImageIndices = ref({});
+
+// Get current image source for inline slideshow
+const getCurrentImageSrc = (performance, index) => {
+  // If performance has a gallery and we're tracking its index, use gallery image
+  if (performance.gallery && performance.gallery.length > 0) {
+    const imageIndex = inlineImageIndices.value[index] || 0;
+    return performance.gallery[imageIndex];
+  }
+  // Otherwise use the default image
+  return performance.image;
+};
+
+// Navigate to next image in inline slideshow
+const nextInlineImage = (performanceIndex) => {
+  const performance = performances[performanceIndex];
+  if (performance.gallery && performance.gallery.length > 0) {
+    const currentIndex = inlineImageIndices.value[performanceIndex] || 0;
+    inlineImageIndices.value[performanceIndex] =
+      (currentIndex + 1) % performance.gallery.length;
+  }
+};
+
+// Navigate to previous image in inline slideshow
+const previousInlineImage = (performanceIndex) => {
+  const performance = performances[performanceIndex];
+  if (performance.gallery && performance.gallery.length > 0) {
+    const currentIndex = inlineImageIndices.value[performanceIndex] || 0;
+    inlineImageIndices.value[performanceIndex] =
+      (currentIndex - 1 + performance.gallery.length) %
+      performance.gallery.length;
+  }
+};
+
+const openGallery = (performanceIndex) => {
+  const performance = performances[performanceIndex];
+  if (performance.gallery && performance.gallery.length > 0) {
+    currentGallery.value = performance.gallery;
+    currentPerformanceTitle.value = performance.title;
+    currentPerformanceRole.value = performance.role;
+    // Start from the current inline image index if available
+    currentImageIndex.value = inlineImageIndices.value[performanceIndex] || 0;
+    isGalleryOpen.value = true;
+    // Prevent body scroll when gallery is open
+    document.body.style.overflow = "hidden";
+  }
+};
+
+const closeGallery = () => {
+  isGalleryOpen.value = false;
+  // Restore body scroll
+  document.body.style.overflow = "";
+};
+
+const nextImage = () => {
+  currentImageIndex.value =
+    (currentImageIndex.value + 1) % currentGallery.value.length;
+};
+
+const previousImage = () => {
+  currentImageIndex.value =
+    (currentImageIndex.value - 1 + currentGallery.value.length) %
+    currentGallery.value.length;
+};
+
+// Keyboard navigation for gallery
+onMounted(() => {
+  const handleKeyPress = (e) => {
+    if (!isGalleryOpen.value) return;
+
+    if (e.key === "ArrowRight") {
+      nextImage();
+    } else if (e.key === "ArrowLeft") {
+      previousImage();
+    } else if (e.key === "Escape") {
+      closeGallery();
+    }
+  };
+
+  window.addEventListener("keydown", handleKeyPress);
+
+  onUnmounted(() => {
+    window.removeEventListener("keydown", handleKeyPress);
+    // Restore body scroll on unmount
+    document.body.style.overflow = "";
+  });
+});
+
 const performances = [
   {
     title: "Die Fledermaus",
@@ -143,6 +471,12 @@ const performances = [
     layout: "grid-group-end",
     badge: "Favorite Role",
     initials: "LS",
+    gallery: [
+      "/images/performance/lucky-stiff-01.jpg",
+      "/images/performance/lucky-stiff-02.jpg",
+      "/images/performance/lucky-stiff-03.jpg",
+      "/images/performance/lucky-stiff-04.jpg",
+    ],
   },
   {
     title: "The Lion, The Witch, & The Wardrobe",

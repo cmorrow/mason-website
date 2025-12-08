@@ -12,9 +12,9 @@
           <h1 class="text-6xl md:text-7xl font-bold mb-6 tracking-tight">
             RESUME
           </h1>
-          <HeroTagline
+          <!-- <HeroTagline
             text="Professional credentials and experience across teaching, performance, and technical theatre"
-          />
+          /> -->
         </div>
       </UContainer>
     </section>

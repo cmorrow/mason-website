@@ -10,11 +10,8 @@
       <UContainer class="relative z-10">
         <div class="text-center text-white max-w-4xl mx-auto">
           <h1 class="text-6xl md:text-7xl font-bold mb-6 tracking-tight">
-            PLAYWRIGHT
+            PLAYWRITING
           </h1>
-          <HeroTagline
-            text="Original theatrical works that explore human experiences and challenge perspectives"
-          />
         </div>
       </UContainer>
     </section>
@@ -23,10 +20,10 @@
     <section class="py-20 bg-white">
       <UContainer>
         <div class="max-w-6xl mx-auto space-y-12">
-          <PlaywrightCard :play="plays[0]" :index="0"
-            >            <template #image>
+          <PlaywrightCard :play="plays[0]" :index="0">
+            <template #image>
               <img
-                src="/images/education/cosmic-clash-01-16x9.jpg"
+                src="/images/olive-clash.png"
                 alt="Olive and The Cosmic Clash"
                 class="w-full h-full object-cover rounded-lg shadow-lg"
               />
@@ -57,31 +54,6 @@
         </div>
       </UContainer>
     </section>
-
-    <!-- Closing Section with Blue Gradient -->
-    <section
-      class="relative py-20 bg-gradient-to-br from-blue-950 via-blue-900 to-blue-800 overflow-hidden"
-    >
-      <!-- Chevron Pattern Overlay -->
-      <div class="absolute inset-0 opacity-10 chevron-pattern"></div>
-
-      <UContainer class="relative z-10">
-        <div class="max-w-4xl mx-auto text-center">
-          <div class="bg-white rounded-lg p-12 shadow-2xl">
-            <h2 class="text-4xl font-bold text-blue-900 mb-6">
-              Original Storytelling
-            </h2>
-            <p class="text-lg text-gray-700 leading-relaxed">
-              Each play represents a journey into the human experience,
-              exploring themes of connection, legacy, and the transformative
-              power of theatre. Through original storytelling, these works
-              challenge perspectives and invite audiences to see the world
-              through new eyes.
-            </p>
-          </div>
-        </div>
-      </UContainer>
-    </section>
   </div>
 </template>
 
@@ -90,9 +62,8 @@ const plays = [
   {
     title: "Olive and The Cosmic Clash",
     genre: "Theatre for Youth",
-    duration: "2 Acts | 90 minutes",
+    duration: "",
     description: "",
-    cast: "6 characters (3M, 3F)",
     setting: "The Cosmos",
   },
 ];

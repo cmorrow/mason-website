@@ -12,9 +12,9 @@
           <h1 class="text-6xl md:text-7xl font-bold mb-6 tracking-tight">
             HEADSHOTS
           </h1>
-          <HeroTagline
+          <!-- <HeroTagline
             text="Professional headshot photography for casting and auditions."
-          />
+          /> -->
         </div>
       </UContainer>
     </section>
