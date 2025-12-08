@@ -36,7 +36,7 @@
                 Performer
               </NuxtLink>
               <NuxtLink
-                to="/playwright"
+                to="/playwriting"
                 class="text-2xl md:text-3xl lg:text-4xl font-bold text-blue-600 leading-tight mt-2 hover:text-blue-700 hover:underline transition-colors duration-300 block"
               >
                 Playwright
@@ -160,7 +160,7 @@
 
           <!-- Small Card - Playwriting -->
           <NuxtLink
-            to="/playwright"
+            to="/playwriting"
             class="md:col-span-1 lg:col-span-1 group relative overflow-hidden rounded-lg aspect-[4/3] flex flex-col hover:scale-[1.02] transition-transform duration-500"
           >
             <img

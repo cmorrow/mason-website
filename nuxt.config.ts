@@ -20,6 +20,7 @@ export default defineNuxtConfig({
           name: "description",
           content: "Mason Morrow - Theatre Educator, Performer, Playwright",
         },
+        { name: "robots", content: "noindex, nofollow" },
       ],
     },
   },
