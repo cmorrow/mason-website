@@ -164,7 +164,7 @@
             class="md:col-span-1 lg:col-span-1 group relative overflow-hidden rounded-lg aspect-[4/3] flex flex-col hover:scale-[1.02] transition-transform duration-500"
           >
             <img
-              src="/images/education/cosmic-clash-01-4x3.jpg"
+              src="/images/Olive-Clash.png"
               alt="Playwriting"
               class="absolute inset-0 w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
             />
